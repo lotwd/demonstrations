@@ -68,7 +68,7 @@ const DemoPage = () => {
             <Grid className={styles.padSides} item xs={12}>
                 <h3>To test the functionality of this component, please use the device toolbar in the Chrome Dev Tools</h3>
                 <h3>To see the code that makes this component work, please visit</h3>
-                <a href="https://github.com/lotwd/demonstrations/tree/main/src/components/grid">Github</a>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/grid">Github</a>
             </Grid>
        </Grid>
        <Grid className={styles.gridContainer} container justify="center" align="center">
@@ -124,7 +124,7 @@ const DemoPage = () => {
             </Grid>
             <Grid className={styles.padSides} item xs={12}>
                 <h3>To see the code that makes this component work, please visit</h3>
-                <a href="https://github.com/lotwd/demonstrations/tree/main/src/components/svgBorder">Github</a>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/svgBorder">Github</a>
             </Grid>
        </Grid>
        </>
