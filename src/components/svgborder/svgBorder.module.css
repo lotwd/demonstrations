@@ -1,0 +1,33 @@
+
+.container{
+    width:100%;
+    display:flex;
+    overflow:hidden;
+}
+.svgImage{
+    
+}
+.flipx,
+.flipX{
+    transform:scaleX(-1);
+}
+.flipy,
+.flipY{
+    transform:scaleY(-1);
+}
+.flipxy,
+.flipBoth{
+    transform:scale(-1,-1);
+}
+.shadow1 path{
+    filter:drop-shadow(0px -1px 4px rgba(0, 0, 0, .25))
+}
+.shadow2 path{
+    filter:drop-shadow(0px -1px 4px rgba(0, 0, 0, .45))
+}
+.shadow3 path{
+    filter:drop-shadow(0px -1px 4px rgba(0, 0, 0, .65))
+}
+.shadow4 path{
+    filter:drop-shadow(0px -1px 4px rgba(0, 0, 0, .75))
+}

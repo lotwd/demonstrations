@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## Grid
+<p>The grid component is a component used to create a responsive flex grid.  It is based off of the Material-UI Grid component</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| Prop | Default | Type | Values | Description
+|---| :---| :---| :--- | :---|
+| className | undefined | string | | class to attach to the grid component
+| direction | row | string| row </br> row-reverse </br> column </br> column-reverse | the direction of the flexbox
+|  container | false | bool | true </br> false | true if Grid component is a container for other Grid components
+| component | div | component | div<br/>button<br/>ul<br/>... | changes the grid root element to the passed component.  Component children override Grid component children 
+| item | false | bool | true </br> false | true if Grid component is a child of a Grid container component
+| justify | right | string | right <br/>left<br/>center<br/> | sets the justify-content css attribute
+| align | start | string | start<br/>end<br/>center<br/> | sets the align-items css attribute
+| gap | 0 | integer | 0-10 | sets the row-gap and column-gap css attributes in px.  Adds space between Grid items.
+| gapRow | 0 | integer | 0-10 | sets the row-gap css attribute in px.  Adds space between rows.
+| gapColumn | 0 | integer | 0-10 | sets the column-gap css attribute in px.  Adds space between columns.
+| xs | undefined | integer | 1-12 | sets the number of columns a Grid item compoment will occupy on an extra small device.  
+| sm | undefined | integer | 1-12 | sets the number of columns a Grid item compoment will occupy on a small device.  
+| md | undefined | integer | 1-12 | sets the number of columns a Grid item compoment will occupy on an medium sized device. 
+| lg | undefined | integer | 1-12 | sets the number of columns a Grid item compoment will occupy on a large device.  
+| xl | undefined | integer | 1-12 | sets the number of columns a Grid item compoment will occupy on an extra large device.  
+| hide | undefined | string | xs<br/>sm<br/>md<br/>lg<br/>xl<br/> | hides the component on the selected device size and up.
+| show | undefined | string | xs<br/>sm<br/>md<br/>lg<br/>xl<br/> | shows the component on the selected device size and up.  Used to show components hidden with the hide prop.
 
-## Available Scripts
+## SVG Border
+<p>The SvgBorder component adds an arced image to use as a border or divider</p>
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Prop | Default | Type | Values | Description
+|---| :---| :--- | :--- |:---|
+flipX | false | bool | true <br/> false | flip the border horizontally
+flipY | false | bool | true <br/> false | flip the border vertically
+color | black | color | any color | sets the border color
+shadow | undefined | integer | 1-4 | adds a drop shadow to the border.  Higher number provides a stronger shadow intensity.

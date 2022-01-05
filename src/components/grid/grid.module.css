@@ -1,0 +1,314 @@
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    height:100%;
+    width:100%;
+}
+.column{
+    flex-direction:column;
+}
+.rowReverse{
+    flex-direction:row-reverse;
+}
+.columnReverse{
+    flex-direction:column-reverse;
+}
+.item{
+    box-sizing:border-box;
+}
+.xswrap1{
+    width:8.3333%;
+}
+.xswrap2{
+    width:16.6667%;
+}
+.xswrap3{
+    width:25%;
+}
+.xswrap4{
+    width:33.3333%;
+}
+.xswrap5{
+    width:41.6667%;
+}
+.xswrap6{
+    width:50%;
+}
+.xswrap7{
+    width:58.3333%;
+}
+.xs.wrap8{
+    width:66.6667%;
+}
+.xswrap9{
+    width:75%;
+}
+.xswrap10{
+    width:83.3333%
+}
+.xswrap11{
+    width:91.6667%
+}
+.xswrap12{
+    width:100%;
+}
+.sm{
+    flex:inherit;
+}
+.justifyCenter{
+    justify-content:center;
+}
+.justifyRight{
+    justify-content:right;
+}
+.justifyLeft{
+    justify-content:left;
+}
+.alignCenter{
+    align-items:center;
+}
+.alignStart{
+    align-items:start;
+}
+.alignEnd{
+    align-items:end;
+}
+.rgap1{
+    row-gap:1px;
+}
+.rgap2{
+    row-gap:2px;
+}
+.rgap3{
+    row-gap:3px;
+}
+.rgap4{
+    row-gap:4px;
+}
+.rgap5{
+    row-gap:5px;
+}
+.rgap6{
+    row-gap:6px;
+}
+.rgap7{
+    row-gap:7px;
+}
+.rgap8{
+    row-gap:8px;
+}
+.rgap9{
+    row-gap:9px;
+}
+.rgap10{
+    row-gap:10px;
+}
+.cgap1{
+    column-gap:1px;
+}
+.cgap2{
+    column-gap:2px;
+}
+.cgap3{
+    column-gap:3px;
+}
+.cgap4{
+    column-gap:4px;
+}
+.cgap5{
+    column-gap:5px;
+}
+.cgap6{
+    column-gap:6px;
+}
+.cgap7{
+    column-gap:7px;
+}
+.cgap8{
+    column-gap:8px;
+}
+.cgap9{
+    column-gap:9px;
+}
+.cgap10{
+    column-gap:10px;
+}
+.hidexs{
+    display:none;
+}
+@media only screen and (min-width: 568px) {
+    .smwrap1{
+        width:8.3333%;
+    }
+    .smwrap2{
+        width:16.6667%;
+    }
+    .smwrap3{
+        width:25%;
+    }
+    .smwrap4{
+        width:33.3333%;
+    }
+    .smwrap5{
+        width:41.6667%;
+    }
+    .smwrap6{
+        width:50%;
+    }
+    .smwrap7{
+        width:58.3333%;
+    }
+    .smwrap8{
+        width:66.6667%;
+    }
+    .smwrap9{
+        width:75%;
+    }
+    .smwrap10{
+        width:83.3333%
+    }
+    .smwrap11{
+        width:91.6667%
+    }
+    .smwrap12{
+        width:100%;
+    }
+    .hidesm{
+        display:none;
+    }
+    .showsm{
+        display:inline;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .mdwrap1{
+        width:8.3333%;
+    }
+    .mdwrap2{
+        width:16.6667%;
+    }
+    .mdwrap3{
+        width:25%;
+    }
+    .mdwrap4{
+        width:33.3333%;
+    }
+    .mdwrap5{
+        width:41.6667%;
+    }
+    .mdwrap6{
+        width:50%;
+    }
+    .mdwrap7{
+        width:58.3333%;
+    }
+    .mdwrap8{
+        width:66.6667%;
+    }
+    .mdwrap9{
+        width:75%;
+    }
+    .mdwrap10{
+        width:83.3333%
+    }
+    .mdwrap11{
+        width:91.6667%
+    }
+    .mdwrap12{
+        width:100%;
+    }
+    .hidemd{
+        display:none;
+    }
+    .showmd{
+        display:inline;
+    }
+}
+@media only screen and (min-width: 1366px) {
+    .lgwrap1{
+        width:8.3333%;
+    }
+    .lgwrap2{
+        width:16.6667%;
+    }
+    .lgwrap3{
+        width:25%;
+    }
+    .lgwrap4{
+        width:33.3333%;
+    }
+    .lgwrap5{
+        width:41.6667%;
+    }
+    .lgwrap6{
+        width:50%;
+    }
+    .lgwrap7{
+        width:58.3333%;
+    }
+    .lgwrap8{
+        width:66.6667%;
+    }
+    .lgwrap9{
+        width:75%;
+    }
+    .lgwrap10{
+        width:83.3333%
+    }
+    .lgwrap11{
+        width:91.6667%
+    }
+    .lgwrap12{
+        width:100%;
+    }
+    .hidelg{
+        display:none;
+    }
+    .showlg{
+        display:inline;
+    }
+}
+@media only screen and (min-width: 1680px) {
+    .xlwrap1{
+        width:8.3333%;
+    }
+    .xlwrap2{
+        width:16.6667%;
+    }
+    .xlwrap3{
+        width:25%;
+    }
+    .xlwrap4{
+        width:33.3333%;
+    }
+    .xlwrap5{
+        width:41.6667%;
+    }
+    .xlwrap6{
+        width:50%;
+    }
+    .xlwrap7{
+        width:58.3333%;
+    }
+    .xlwrap8{
+        width:66.6667%;
+    }
+    .xlwrap9{
+        width:75%;
+    }
+    .xlwrap10{
+        width:83.3333%
+    }
+    .xlwrap11{
+        width:91.6667%
+    }
+    .xlwrap12{
+        width:100%;
+    }
+    .hidexl{
+        display:none;
+    }
+    .showxl{
+        display:inline;
+    }
+}
