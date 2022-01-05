@@ -124,7 +124,7 @@ const DemoPage = () => {
             </Grid>
             <Grid className={styles.padSides} item xs={12}>
                 <h3>To see the code that makes this component work, please visit</h3>
-                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/svgBorder">Github</a>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/svgborder">Github</a>
             </Grid>
        </Grid>
        </>
