@@ -1,5 +1,7 @@
 # React Components Demonstrations.
 
+Components code can be found in the src/components folder
+
 Demonstrations of these components can be view by clicking [Here](https://demonstrations.lotwebdesign.com)
 
 ## Grid
