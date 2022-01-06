@@ -8,6 +8,18 @@
 .padSides{
     padding:0 15px;
 }
+.button{
+    padding:15px 30px;
+    font-size:18px;
+    border:1px solid #f94144;
+    border-radius:3px;
+    background-color:#f9c74f; 
+    cursor:pointer;  
+}
+.button:hover{
+    background-color:#90be6d;
+    box-shadow:0px 2px 3px #577590;
+}
 .item{
     height:100px;
     font-size:13px;

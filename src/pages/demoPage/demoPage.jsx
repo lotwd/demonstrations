@@ -1,13 +1,43 @@
-import React from 'react'
-import { Grid, SvgBorder } from '../../components'
+import React, { useState } from 'react'
+import { Grid, SvgBorder, RaceCar } from '../../components'
 import styles from './demoPage.module.css'
 
 const DemoPage = () => {
+    const [ animateCar, setAnimateCar ] = useState(false)
     return (
         <>
+        <Grid className={styles.gridContainer} container justify="center" align="center">
+            <Grid className={styles.padSides} item xs={12}>
+                <h2>The Racecar component creates an animated race car.</h2>
+            </Grid>
+            <Grid item xs={12}>
+                <h3>Usage:</h3>
+            </Grid>
+            <Grid className={`${styles.padSides} ${styles.marginBottom}`} item xs={12}>
+                <code>{
+                    `<RaceCar rumbleFrame animate={${animateCar ? `true` : `false`}}/>`
+                }</code>
+            </Grid>
+            <Grid item xs={12}>
+                <RaceCar rumbleFrame animate={animateCar} width="350px" className={styles.marginBottom}/>
+            </Grid>
+            <Grid item xs={8} md={3} lg={2} xl={1} component = {
+            <button className={`${styles.button} ${styles.marginBottom}`} onClick={()=>setAnimateCar(!animateCar)}>{ animateCar ? `RESET` : `ANIMATE` }</button>
+            }/>
+            <Grid className={styles.padSides} item xs={12}>
+                <h3>{
+                        `Use the ${animateCar ? `Reset` : `Animate`} button above to ${animateCar ? `reset` : `test`} the animation`
+                    }
+                </h3>
+            </Grid>
+            <Grid className={styles.padSides} item xs={12}>
+                <h3>To see the code that makes this component work, please visit</h3>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/racecar">Github</a>
+            </Grid>   
+        </Grid>
         <Grid className={styles.gridContainer} container justify="center" align="center" rowGap={1}>
             <Grid className={styles.padSides} item xs={12}>
-                <h2>The Grid component creates an easy to use responsive grid and is modelled after Material-UIs Grid component</h2>
+                <h2>The Grid component creates an easy to use responsive grid and is modelled after Material-UIs Grid component.</h2>
             </Grid>
             <Grid className={styles.padSides} item xs={12}>
                 <h3>To use this component we start with a Grid component with the container prop active</h3>
