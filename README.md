@@ -34,3 +34,13 @@ flipX | false | bool | true <br/> false | flip the border horizontally
 flipY | false | bool | true <br/> false | flip the border vertically
 color | black | color | any color | sets the border color
 shadow | undefined | integer | 1-4 | adds a drop shadow to the border.  Higher number provides a stronger shadow intensity.
+
+## Racecar
+<p>The Racecar component creates an animated race car</p>
+
+Prop | Default | Type | Values | Description
+|---| :---| :--- | :--- |:---|
+rumbleFrame | false | bool | true <br/> false | adds a rumble effect to the car frame
+animate | false | bool | true <br/> false | starts the zoom animation
+width | '350px' | string | | sets the width of the race car svg image
+className | `` | string | | classes to attach to the svg
