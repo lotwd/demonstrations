@@ -29,8 +29,9 @@ const ScrollContainer = ({ children }) => {
       const activeChild = containerRef.current.querySelector(
         `.${styles.active}`
       );
+      console.log("ACTIVE CHILD", activeChild)
       // if the child is the last
-      const isLastElement = !activeChild.nextSibling
+      const isLastElement = !activeChild?.nextSibling
       // if the end of the element is displayed
       const atEndOfElement 
       = 
@@ -41,7 +42,7 @@ const ScrollContainer = ({ children }) => {
       activeChild.getBoundingClientRect().top >= 0
       // next element to enter display area
       const nextActiveChild =
-        direction > 0 ? activeChild.nextSibling : activeChild.previousSibling;
+        direction > 0 ? activeChild?.nextSibling : activeChild?.previousSibling;
       // determines translate amount
       const moveAmount =
         atEndOfElement
