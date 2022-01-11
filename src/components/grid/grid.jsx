@@ -61,7 +61,7 @@ const Grid = (props) => {
   return props.component ? (
     <NewComponent {...props} />
   ) : (
-    <div className={classes}>{props.children}</div>
+    <div style={props.style} className={classes}>{props.children}</div>
   );
 };
 
