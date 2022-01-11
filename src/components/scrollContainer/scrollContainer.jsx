@@ -26,9 +26,13 @@ const ScrollContainer = ({ children }) => {
       e.touches?.[0].clientY > touchStartRef.current 
       ? -1 : 1 : e.deltaY > 0 ? 1 : -1;
       // current displayed child
-      const activeChild = containerRef.current.querySelector(
+      const activeChild = 
+      containerRef.current.querySelector(
         `.${styles.active}`
-      );
+      )
+      ||
+      containerRef.current.querySelector(`[class*='scrollContainer_active']`);
+      
       console.log("ACTIVE CHILD", activeChild)
       // if the child is the last
       const isLastElement = !activeChild?.nextSibling
