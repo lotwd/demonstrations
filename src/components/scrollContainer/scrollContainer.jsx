@@ -12,9 +12,6 @@ const ScrollContainer = ({ children }) => {
   };
   const movingRef = useRef(moving);
   const containerRef = useRef();
-  const showAlert = (e) => {
-      console.log(e)
-  }
   const touchStartRef = useRef(0)
   const handleTouchStart = (e) => {
       touchStartRef.current = e.touches[0].clientY
@@ -28,12 +25,13 @@ const ScrollContainer = ({ children }) => {
       ? 
       e.touches?.[0].clientY > touchStartRef.current 
       ? -1 : 1 : e.deltaY > 0 ? 1 : -1;
-      console.log("DIRECTION", direction)
+      // current displayed child
       const activeChild = containerRef.current.querySelector(
         `.${styles.active}`
       );
+      // if the child is the last
       const isLastElement = !activeChild.nextSibling
-      console.log("ACTIVE", activeChild)
+      // if the end of the element is displayed
       const atEndOfElement 
       = 
       direction > 0
@@ -41,26 +39,23 @@ const ScrollContainer = ({ children }) => {
       window?.innerHeight - activeChild.getBoundingClientRect().bottom >= 0 
       :
       activeChild.getBoundingClientRect().top >= 0
-      console.log("AT END", atEndOfElement)
+      // next element to enter display area
       const nextActiveChild =
         direction > 0 ? activeChild.nextSibling : activeChild.previousSibling;
-      console.log("NEXT", nextActiveChild)
+      // determines translate amount
       const moveAmount =
         atEndOfElement
         ?
         activeChild && nextActiveChild
         ? 
-        //1
         nextActiveChild.getBoundingClientRect().top 
         -
         activeChild.getBoundingClientRect().top
         : 
-        //2
         0
         :
         nextActiveChild && direction < 0 
         ? 
-        //3
         window?.innerHeight + activeChild.getBoundingClientRect().top >= 0
         ?
         activeChild.getBoundingClientRect().top
@@ -69,38 +64,13 @@ const ScrollContainer = ({ children }) => {
         :
         !isLastElement && activeChild.getBoundingClientRect().bottom - window?.innerHeight < window?.innerHeight
         ?
-        //4
         activeChild.getBoundingClientRect().bottom - window?.innerHeight
         :
-        //5
         activeChild.getBoundingClientRect().bottom - window?.innerHeight
-      //  console.log("TEST", activeChild.getBoundingClientRect().bottom, window?.innerHeight )
-        const moveAmountTest =
-        atEndOfElement
-        ?
-        activeChild && nextActiveChild
-        ? 
-        1
-        : 
-        2
-        :
-        nextActiveChild && direction < 0 
-        ? 
-        window?.innerHeight + activeChild.getBoundingClientRect().top <= 0
-        ?
-        3
-        :
-        3.5 
-        :
-        !isLastElement && activeChild.getBoundingClientRect().bottom - window?.innerHeight < window?.innerHeight
-        ?
-        4
-        :
-        5
-      console.log("MOVE TEST", moveAmountTest)
+      
       if (moveAmount) {
         movingRef.current.processing = true;
-        movingRef.current.data = transformAmount - moveAmount;
+        movingRef.current.data = transformAmount - moveAmount
         if(atEndOfElement){
           setTransformAmount(movingRef.current.data + movingRef.current.overflow);
           movingRef.current.nextIndex = movingRef.current.nextIndex + direction
