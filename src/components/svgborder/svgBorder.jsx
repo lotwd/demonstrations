@@ -25,7 +25,7 @@ const SvgBorder = ({flipX, flipY, color, shadow}) => {
     return (
         <div className={styles.container}>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/1999/xhtml"
             className={classes}
             style={{fill:color}}
             viewBox="0 0 500 50"

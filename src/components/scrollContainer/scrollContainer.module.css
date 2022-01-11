@@ -1,0 +1,12 @@
+.scrollContainer{
+    overflow:hidden;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    height:100%;
+}
+.scrollItem{
+    transition:transform 1s;
+}
+.active{
+
+}
