@@ -1,11 +1,35 @@
 import React, { useState } from 'react'
-import { Grid, SvgBorder, RaceCar } from '../../components'
+import { Grid, SvgBorder, RaceCar, ScrollContainer } from '../../components'
 import styles from './demoPage.module.css'
 
 const DemoPage = () => {
     const [ animateCar, setAnimateCar ] = useState(false)
     return (
         <>
+        <ScrollContainer>
+        <Grid className={styles.gridContainer} container justify="center" align="center">
+            <Grid className={styles.padSides} item xs={12}>
+                <h2>The ScrollContainer component creates a controlled scrolling experience.</h2>
+            </Grid>
+            <Grid className={styles.padSides} item xs={12}>
+                <h3>A swipe will move the contents either the full height of the display, or to the start or end of child components.</h3>
+            </Grid>
+            <Grid item xs={12}>
+                <h3>Usage:</h3>
+            </Grid>
+            <Grid className={`${styles.padSides} ${styles.marginBottom}`} item xs={12}>
+                <code>{
+                    `<ScrollContainer>{children}</ScrollContainer>`
+                }</code>
+            </Grid>
+            <Grid className={styles.padSides} item xs={12}>
+                <p>To see a demo of this component, simply continue to use this page.  The content on this page is encapsulated in a ScrollContainer element.</p>
+            </Grid>
+            <Grid className={styles.padSides} item xs={12}>
+                <h3>To see the code that makes this component work, please visit</h3>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/svgborder">Github</a>
+            </Grid>
+            </Grid>
         <Grid className={styles.gridContainer} container justify="center" align="center">
             <Grid className={styles.padSides} item xs={12}>
                 <h2>The Racecar component creates an animated race car.</h2>
@@ -152,11 +176,13 @@ const DemoPage = () => {
                 </code>
                 <SvgBorder flipX/>
             </Grid>
-            <Grid className={styles.padSides} item xs={12}>
+            <Grid className={`${styles.padSides} ${styles.marginBottom}`} item xs={12}>
                 <h3>To see the code that makes this component work, please visit</h3>
-                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/svgborder">Github</a>
+                <a href="https://github.com/lotwd/demonstrations/tree/master/src/components/scrollContainer">Github</a>
             </Grid>
+            
        </Grid>
+       </ScrollContainer>
        </>
     )
 }

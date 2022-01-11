@@ -24,6 +24,9 @@
     height:100px;
     font-size:13px;
 }
+.scrollItem{
+    display:flex;
+}
 .svgItem{
     margin-bottom:10px;
 }
